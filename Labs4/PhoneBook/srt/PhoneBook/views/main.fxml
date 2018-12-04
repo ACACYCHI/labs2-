@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/8.0.112" fx:controller="PhoneBook.controllers.Controller">
+    <children>
+        <TableView fx:id="tableBook" layoutY="52.0" prefHeight="548.0" prefWidth="800.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="50.0" text="№"/>
+                <TableColumn fx:id="fromColumn" prefWidth="150.0" text="Кто звонил"/>
+                <TableColumn fx:id="toColumn" prefWidth="150.0" text="Кому звонил"/>
+                <TableColumn fx:id="dateColumn" prefWidth="150.0" text="Дата"/>
+                <TableColumn fx:id="timeColumn" prefWidth="150.0" text="Время"/>
+                <TableColumn fx:id="durationColumn" prefWidth="150.0" text="Длительность"/>
+
+            </columns>
+        </TableView>
+        <TextField onAction="#handleSearch" onMouseClicked="#handleInput" layoutX="25.0" layoutY="14.0"
+                   prefHeight="27.0" prefWidth="750.0" promptText="Поиск...">
+            <effect>
+                <Glow/>
+            </effect>
+        </TextField>
+    </children>
+</AnchorPane>
