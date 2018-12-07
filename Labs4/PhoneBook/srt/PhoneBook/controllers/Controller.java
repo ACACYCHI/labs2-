@@ -20,8 +20,11 @@ public class Controller {
     private ObservableList<Book> Data = FXCollections.observableArrayList();
 
     @FXML
-    private TableView<Book> tableBook;
+    private TableView<Book> tableBook = new TableView<>();
 
+    @FXML
+    private Button add;
+    
     @FXML
     private TableColumn<Book, Integer> idColumn;
 
@@ -52,6 +55,11 @@ public class Controller {
 
         tableBook.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         tableBook.setItems(Data);
+        
+        add.setOnAction(e->{
+            ObservableList<Book> data = tableBook.getItems();
+            data.add(new Book(k+1, "Александр", "Владимир", "  16.07.2018", "13:40", 31));
+        });
     }
 
     @FXML
