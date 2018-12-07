@@ -7,6 +7,11 @@
             minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"
             xmlns="http://javafx.com/javafx/8.0.112" fx:controller="PhoneBook.controllers.Controller">
     <children>
+        <Button fx:id="add" layoutX="0" layoutY="28" maxHeight="20.0" maxWidth="100.0"
+                minHeight="20.0" minWidth="100.0" mnemonicParsing="false" prefHeight="20.0"
+                prefWidth="100.0" style="-fx-background-color: #778899; -fx-background-radius: 40;"
+                text="Добавить">
+        </Button>
         <TableView fx:id="tableBook" layoutY="52.0" prefHeight="548.0" prefWidth="800.0">
             <columns>
                 <TableColumn fx:id="idColumn" prefWidth="50.0" text="№"/>
